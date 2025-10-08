@@ -1,0 +1,25 @@
+name: Daily Gitcoin Commit
+
+on:
+  schedule:
+    - cron: '0 17 * * *' 
+  workflow_dispatch:
+
+jobs:
+  auto-commit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: daily
+        run: |
+          echo "$(date)" >> log.txt
+
+      - name: Commit changes
+        run: |
+          git config user.name "Crys"
+          git config user.email "alungsj112@gmail.com"
+          git add log.txt
+          git commit -m "daily"
+          git push
