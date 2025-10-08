@@ -1,4 +1,4 @@
-name: Daily Gitcoin Commit
+name: Daily
 
 on:
   schedule:
