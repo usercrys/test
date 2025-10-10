@@ -23,7 +23,7 @@ jobs:
 
       - name: Commit and push
         run: |
-          git config --global user.name "usercrys"
+          git config --global user.name "Crys"
           git add log.txt
           git commit -m "Daily"
           git push origin main
